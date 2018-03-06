@@ -1,0 +1,43 @@
+.accordion
+	max-width 1200px
+	display block
+	margin 0 auto
+	.dt
+		padding: 14px 12px;
+		&.actif
+			background-color black
+			@extend .transition
+			a
+				color white
+				transition none
+				&:hover
+					color white
+			.arrow-up
+				top -6px
+		&_title
+			color: black
+			text-decoration none
+			letter-spacing 3px
+			display flex
+			flex-direction row
+			justify-content space-between
+			align-items center
+			font-weight 50
+		&:hover
+			a 
+				color black
+				background-color: transparent
+	dd
+		margin-top 0px
+		font-size: 16px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+.accordion-actif
+	.accordion
+		display none
+	.accordion-show
+		display block
